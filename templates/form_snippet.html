@@ -1,0 +1,11 @@
+{% for field in form %}
+    {% if field.errors %}
+        <div class="fieldWrapper error">
+    {% else %}
+        <div class="fieldWrapper">
+    {% endif %}
+            {% if field.field.required %}<span class="required">*</span>{% endif %}
+            {{ field.label_tag }}{% if field.errors %} <span class="error">&#8212; {{ field.errors|first|lower|striptags }}</span>{% endif %}
+            {{ field }}
+        </div>
+{% endfor %}
