@@ -21,4 +21,4 @@ def contact(request):
 		form = ContactForm(
 			#initial={'subject': 'Message from the contact form.'} # prepopulates the subject line
 		)
-	return render_to_response('contact_form.html', {'form': form}, context_instance=RequestContext(request))
+	return render_to_response('contact/contact_form.html', {'form': form}, context_instance=RequestContext(request))
