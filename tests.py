@@ -14,7 +14,7 @@ class SimpleTest(TestCase):
         self.failUnlessEqual(response.status_code, 200)
 
         # Check that the correct template is being used.
-        self.assertTemplateUsed(response, 'contact_form.html')
+        self.assertTemplateUsed(response, 'contact/contact_form.html')
         
         # Issue a POST request.
         response = self.client.post('/contact/', self.post_dict, follow=False)
@@ -29,7 +29,7 @@ class SimpleTest(TestCase):
         self.failUnlessEqual(response.status_code, 200)
 
         # Check that the correct template is being used.
-        self.assertTemplateUsed(response, 'thanks.html')
+        self.assertTemplateUsed(response, 'contact/thanks.html')
         
         # Check that the response is being properly routed.
         self.failUnlessEqual(response.redirect_chain, [('http://testserver/contact/thanks/', 302)])
