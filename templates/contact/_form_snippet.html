@@ -1,0 +1,15 @@
+{% for field in form %}
+    {% if not field.is_hidden %}
+        {% if field.errors %}
+            <div class="fieldWrapper error" id="wrapper_{{ field.html_name }}">
+        {% else %}
+            <div class="fieldWrapper" id="wrapper_{{ field.html_name }}">
+        {% endif %}
+                {% if field.field.required %}<span class="required">*</span>{% endif %}
+                {{ field.label_tag }}{% if field.errors %} <span class="error">&#8212; {{ field.errors|first|lower|striptags }}</span>{% endif %}
+                {{ field|safe }}
+            </div>
+    {% else %}
+        {{ field }}
+    {% endif %}
+{% endfor %}
