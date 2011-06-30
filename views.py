@@ -6,6 +6,7 @@ from django.template import RequestContext
 from contact.forms import ContactForm
 
 def contact(request):
+    recipients = getattr(settings, 'CONTACT_FORM_RECIPIENTS', settings.MANAGERS)
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -14,7 +15,7 @@ def contact(request):
                 cd['subject'],
                 cd['message'],
                 cd.get('email', cd['email']),
-                [i[1] for i in settings.MANAGERS], # send to managers as defined in project's settings.py file
+                [i[1] for i in recipients], # send to managers as defined in project's settings.py file
             )
             return HttpResponseRedirect('/contact/thanks/')
     else:
