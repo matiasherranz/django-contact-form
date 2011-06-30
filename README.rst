@@ -18,7 +18,7 @@ Add to the project's settings.py file tuple of installed apps:::
 
  'django_contact_form',
 
-In the project's urls.py file add:""
+In the project's urls.py file add:::
 
  url(r'^contact/', include('django_contact_form.urls')),
 
