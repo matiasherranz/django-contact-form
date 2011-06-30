@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from contact.forms import ContactForm
+from django_contact_form.forms import ContactForm
 
 def contact(request):
     recipients = getattr(settings, 'CONTACT_FORM_RECIPIENTS', settings.MANAGERS)

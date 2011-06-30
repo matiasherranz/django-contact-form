@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from contact.views import contact
+from django_contact_form.views import contact
 
 urlpatterns = patterns('',
     url(r'^$', contact, {}, 'contact'),

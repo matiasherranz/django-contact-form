@@ -1,31 +1,18 @@
-Installation
-============
+Installation from Source
+========================
 
-Download into directory named contact
--------------------------------------
-
-Using virtualenvwrapper in a shell:
-`cdvirtualenv`
-`git clone git@github.com:jbergantine/django-contact.git contact`
-
-Make sure that the contact application is on the python path
-------------------------------------------------------------
-
-Using virtualenvwrapper run the following in a shell:
-`add2virtualenv /path/to/directory_above_contact/`
-
-Using bash:
-edit the ~/.bash_profile or similar file, add to it the following line:
-`export PYTHONPATH=$PYTHONPATH:/path/to/directory_above_contact/`
+`git clone git@github.com:jbergantine/django-contact-form.git`
+`cd django-contact-form`
+`python setup.py install`
 
 Setup the project for the application
 -------------------------------------
 
 Add to the project's settings.py file tuple of installed apps:
-`'contact',`
+`'django_contact_form',`
 
 In the project's urls.py file add:
-`(r'^contact/', include('contact.urls')),`
+`url(r'^contact/', include('django_contact_form.urls')),`
 
 Setup the recipients of the contact form
 ----------------------------------------
