@@ -1,0 +1,2 @@
+recursive-include django_contact/templates *.html
+include LICENSE.txt
