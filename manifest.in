@@ -1,2 +1,3 @@
-recursive-include django_contact/templates *.html
+recursive-include django_contact_form/templates *.html
 include LICENSE.txt
+include README.rst
