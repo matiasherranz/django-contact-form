@@ -46,4 +46,4 @@ Configure the Templates
 
 By default the templates contain only the bare necessities. To override the default templates, create a directory called contact in your templates directory and add 2 files: contact_form.html and thanks.html. To copy the templates cd to the root of the django project and execute the following command:::
 
-cp -r ../src/django-contact-form/django_contact_form/templates/contact templates/contact
+ cp -r ../src/django-contact-form/django_contact_form/templates/contact templates/contact
