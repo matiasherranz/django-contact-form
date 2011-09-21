@@ -11,6 +11,21 @@ Installation from Source
  $ cd django-contact-form
  $ python setup.py install
 
+Installation via PIP Requirements File
+======================================
+
+Include in the PIP requirements file the following line:
+
+::
+
+ -e git+git@github.com:jbergantine/django-contact-form.git#egg=django_contact_form
+
+And then install as normal (IE:)
+
+::
+
+ $ pip install -r path/to/requirements/file.txt
+
 Setup the Project For the Application
 =====================================
 
