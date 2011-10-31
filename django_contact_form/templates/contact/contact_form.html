@@ -6,14 +6,6 @@
             Please correct the highlighted field{{ form.errors|pluralize }} below and resubmit.
         </h2>
     {% endif %}
-    
-    <p>Fields marked with a <span class="required">*</span> are required.</p>
-    
-    <form action="" method="post">
-        {% csrf_token %}
-        {% include "contact/_form_snippet.html" %}
-        <div>
-            <input type="submit" value="Submit" id="submit" />
-        </div>
-    </form>
+
+    {% include "contact/form.html" %}
 </section>

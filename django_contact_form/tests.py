@@ -4,7 +4,9 @@ from django.test.client import Client
 class SimpleTest(TestCase):
     def setUp(self):
         self.client = Client()
-        self.post_dict = {'email': 'nobody@example.com', 'subject': 'Test', 'message': 'This is a test message.'}
+        self.post_dict = {'email': 'nobody@example.com', 
+                          'subject': 'Test', 
+                          'message': 'This is a test message.'}
     
     def test_form_url(self):
         # Issue a GET request.
