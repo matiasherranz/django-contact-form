@@ -1,3 +1,9 @@
+{% if form.errors %}
+    <h2 class="errors">
+        Please correct the highlighted field{{ form.errors|pluralize }} below and resubmit.
+    </h2>
+{% endif %}
+
 <form action="." method="post">
     {% csrf_token %}
 

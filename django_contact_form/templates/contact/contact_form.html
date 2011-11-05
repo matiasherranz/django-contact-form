@@ -1,11 +1,5 @@
 <section>
     <h1>Contact Us</h1>
     
-    {% if form.errors %}
-        <h2 class="errors">
-            Please correct the highlighted field{{ form.errors|pluralize }} below and resubmit.
-        </h2>
-    {% endif %}
-
     {% include "contact/form.html" %}
 </section>
