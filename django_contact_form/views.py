@@ -6,6 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django_contact_form.forms import ContactForm
 
+
 def contact(request):
     recipients = getattr(settings, 'CONTACT_FORM_RECIPIENTS', settings.MANAGERS)
     if request.method == 'POST':
